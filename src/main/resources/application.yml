@@ -1,0 +1,34 @@
+server:
+  port: 3169
+  forward-headers-strategy: framework
+spring:
+  application:
+    name: ManEcom
+  datasource:
+    username: postgres
+    url: jdbc:postgresql://localhost:5432/man_ecom?useSSL=false
+    password: postgres
+    hikari:
+      maximum-pool-size: 2
+  jpa:
+    properties:
+      hibernate:
+        enable_lazy_load_no_trans: true
+        dialect: org.hibernate.dialect.PostgreSQL94Dialect
+        format_sql: 'true'
+        jdbc:
+          lab:
+            non_contexttual_creation: 'true'
+    hibernate:
+      ddl-auto: none
+  servlet:
+    multipart:
+      max-request-size: 25MB
+      max-file-size: 10MB
+  jooq:
+    sql-dialect:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+application:
+  version: 0.0.1

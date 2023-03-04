@@ -1,4 +1,4 @@
-package com.manecom.manecom;
+package com.manecom;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

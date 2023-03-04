@@ -1,4 +1,4 @@
-package com.manecom.manecom;
+package com.manecom;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
