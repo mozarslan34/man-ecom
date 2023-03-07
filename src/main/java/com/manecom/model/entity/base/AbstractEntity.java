@@ -12,6 +12,9 @@ import org.springframework.data.annotation.LastModifiedBy;
 import org.springframework.data.annotation.LastModifiedDate;
 
 import java.time.ZonedDateTime;
+/**
+ * @author Nurettın Kemaloglu
+ */
 
 @Getter
 @Setter

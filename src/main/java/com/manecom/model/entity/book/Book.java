@@ -35,20 +35,20 @@ public class Book extends AbstractEntity {
     @Column(name = "language")
     private String language;
     @Column(name = "print_count")
-    private  Long printCount;
+    private Long printCount;
     @Column(name = "year_of_printing")
     private LocalDate yearOfPrinting;
     @Enumerated(EnumType.STRING)
     private CoverType coverType;
     @Column(name = "book_description")
-    private  String bookDescription;
+    private String bookDescription;
     @Enumerated(EnumType.STRING)
     private RentStatus rentStatus;
     @Enumerated(EnumType.STRING)
     private Availability availability;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "publisher_id",referencedColumnName = "id")
+    @JoinColumn(name = "publisher_id", referencedColumnName = "id")
     private Publisher publisher;
 
     @OneToOne(mappedBy = "book")

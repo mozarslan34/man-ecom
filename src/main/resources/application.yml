@@ -20,7 +20,7 @@ spring:
           lab:
             non_contexttual_creation: 'true'
     hibernate:
-      ddl-auto: create
+      ddl-auto: none
   servlet:
     multipart:
       max-request-size: 25MB
