@@ -6,7 +6,7 @@ spring:
     name: ManEcom
   datasource:
     username: postgres
-    url: jdbc:postgresql://localhost:5432/man_ecom?useSSL=false
+    url: jdbc:postgresql://localhost:5433/man_ecom?useSSL=false
     password: postgres
     hikari:
       maximum-pool-size: 2
