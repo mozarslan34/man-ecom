@@ -1,6 +1,7 @@
 package com.manecom.model.entity.book;
 
 import com.manecom.constant.EntityConstantsUtil;
+import com.manecom.model.entity.author.Author;
 import com.manecom.model.entity.base.AbstractEntity;
 import com.manecom.model.entity.enums.Availability;
 import com.manecom.model.entity.enums.CoverType;
@@ -14,6 +15,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDate;
+import java.util.HashSet;
+import java.util.Set;
 
 @Getter
 @Setter
@@ -53,4 +56,7 @@ public class Book extends AbstractEntity {
 
     @OneToOne(mappedBy = "book")
     private Photo photo;
+
+    @ManyToMany(mappedBy = "book", cascade = { CascadeType.ALL })
+    private Set<Author> authors = new HashSet<>();
 }
