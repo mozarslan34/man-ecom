@@ -46,21 +46,14 @@ public class Author extends AbstractEntity {
                     @JoinColumn(name = "book_id")
             }
     )
-    Set<Book> projects = new HashSet<>();
+    Set<Book> books = new HashSet<>();
 
 
-    @ManyToMany(cascade = {
-            CascadeType.ALL
-    })
+    @ManyToMany
     @JoinTable(
-            name = "authors_publishers",
-            joinColumns = {
-                    @JoinColumn(name = "author_id")
-            },
-            inverseJoinColumns = {
-                    @JoinColumn(name = "publisher_id")
-            }
-    )
+            name = "publisher_author",
+            joinColumns = @JoinColumn(name = "publisher_id"),
+            inverseJoinColumns = @JoinColumn(name = "author_id"))
     Set<Publisher> publishers = new HashSet<>();
 
 

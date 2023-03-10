@@ -27,6 +27,7 @@ public class Publisher extends AbstractEntity {
     private String description;
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "publisher")
     private List<Book> books;
-    @ManyToMany(mappedBy = "publisher", cascade = { CascadeType.ALL })
+
+    @ManyToMany(mappedBy = "publishers")
     private Set<Author> authors = new HashSet<>();
 }

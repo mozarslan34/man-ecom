@@ -57,6 +57,6 @@ public class Book extends AbstractEntity {
     @OneToOne(mappedBy = "book")
     private Photo photo;
 
-    @ManyToMany(mappedBy = "book", cascade = { CascadeType.ALL })
+    @ManyToMany(mappedBy = "books", cascade = { CascadeType.ALL })
     private Set<Author> authors = new HashSet<>();
 }
