@@ -21,10 +21,10 @@ public class Customer extends AbstractEntity {
     private String customerName;
     @Column(name = "customer_surname")
     private String customerSurname;
-    @Column(name = "email")
+    @Column(name = "email",nullable = false, unique = true,length =80)
     private String email;
     @Column(name = "phone_number")
     private String phoneNumber;
-    @Column(name = "password")
+    @Column(name = "password",nullable = false, length =20)
     private String password;
 }
