@@ -20,7 +20,7 @@ spring:
           lab:
             non_contexttual_creation: 'true'
     hibernate:
-      ddl-auto: create
+      ddl-auto: none
   servlet:
     multipart:
       max-request-size: 25MB
@@ -29,6 +29,6 @@ spring:
     sql-dialect:
   mvc:
     pathmatch:
-      matching-strategy: ant_path_matcher
+      matching-strategy: ANT_PATH_MATCHER
 application:
   version: 0.0.1
