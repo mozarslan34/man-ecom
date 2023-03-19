@@ -1,6 +1,7 @@
 package com.manecom.model.entity.publisher;
 
 import com.manecom.constant.EntityConstantsUtil;
+import com.manecom.model.entity.author.Author;
 import com.manecom.model.entity.base.AbstractEntity;
 import com.manecom.model.entity.book.Book;
 import jakarta.persistence.*;
@@ -9,7 +10,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Getter
 @Setter
@@ -24,4 +27,7 @@ public class Publisher extends AbstractEntity {
     private String description;
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "publisher")
     private List<Book> books;
+
+    @ManyToMany(mappedBy = "publishers")
+    private Set<Author> authors = new HashSet<>();
 }
