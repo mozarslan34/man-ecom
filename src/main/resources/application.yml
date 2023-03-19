@@ -32,3 +32,8 @@ spring:
       matching-strategy: ANT_PATH_MATCHER
 application:
   version: 0.0.1
+google:
+  recaptcha:
+    secret: 6LeDvAclAAAAAJD9SPKBHKMckvq3CysTp4tdPgW8
+    sitekey: 6LeDvAclAAAAAORrJqVbgwbWEY7sZH95SJOr89Gm
+
